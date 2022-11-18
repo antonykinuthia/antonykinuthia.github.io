@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="javascript/text" href="index.js">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+    <div class="port">
+        <h1><a href="#">portfolio</a></h1>
+    </div>
+    <div class="toggle" onclick="toggleMenu()"></div>
+    <div class="list">
+        <ul>
+            <li><a class="active" href="#" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#foo"  onclick="toggleMenu()">About</a></li>
+            <li><a href="#Work"  onclick="toggleMenu()">Work</a></li>
+            <li><a href="#contact"  onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
+   </header> 
+ <section>
+    <div class="home" id="Home">
+        <div class="more">
+         <div class="morebx">
+          <h2  class="animate__animated animate__bounce">I'm Antony Kinuthia<br><span>A frontend web<b> developer</b> and<b> designer</b>.</span></h2>
+          <p class="animate__animated animate__wobble">welcome to my portfolio, enjoy my handy work. </p>
+          <a href="#Work" class="btn">My Work</a>
+        </div>
+    </div>
+</div>
+ </section>
+
+ <section class="foo" id="foo">
+    <div class="About">
+       <div class="bx">
+        <h1>About me</h1>
+        <b> I'm frontend web developer and designer with the hand's on experience in developing and designing high fidelity and pixel related web sites according to the client's specification and requirements of the project,<br> with also the ability to escalate brand awareness and improve relations in the company and its environs.</b>
+        <blockquote>
+            <p>"The original idea of the web was that it should be a collaborative space where you can communicate through sharing information"</p>
+            <cite>~Tim Berner-Lee</cite>
+        </blockquote>
+      </div>
+    </div>
+ </section>
+ <section class="Work" id="Work">
+ <div class="fine">
+    <h2>My Work</h2>
+ </div>
+ <div class="done">
+    <div class="real" style="--i:0;--clr:#ff2972;">
+        <img src="desktop-outline.svg">
+        <h3>Web Development</h3>
+        <span>I develop high fidelity website with the latest updates with user friendly interface as per the client's requirements.<br> The ux/ui design is eyecatching with the latest animation and hover effect blended together to form a magical website.</span>
+    </div>
+    <div class="real" style="--i:1;--clr:#eb5ae5;">
+        <img src="laptop-outline.svg">
+        <h3>Web Design</h3>
+        <span>Web design is another service i offer, where i design website with the set client's parameter to achieve a more visual enhancced display to achieve the set goal by the client.<br></span>
+    </div>
+    <div class="real" style="--i:2;--clr:#04fc43;">
+        <img src="camera-outline.svg">
+        <h3>Photography</h3>
+        <span>I take high definition photographs which serve as my mode of communication and express my view through the lens.<br>The photograph serve as the memories of the happy times shared among the clients.</span>
+    </div>
+    <div class="real" style="--i:3;--clr:#01bdab;">
+        <img src="color-palette-outline (1).svg">
+        <h3>Art</h3>
+        <span>Art being part of my expression helps me with the creative edge which i intertwine with website for the best visual fidelity.<br>I also offer 3d paintings and oil paintings.</span>
+    </div>
+ </div>
+ </section>
+ <footer class="contact" id="contact">
+    <div class="holla">
+        <h3>Contact Me</h3>
+    </div>
+    <div class="me">
+        <div class="yours">
+        <div class="reach">
+        <ion-icon name="pin"></ion-icon>
+        <h4>location</h4>
+        <a>Nairobi,Kenya.</a>
+        </div>
+        <div class="reach">
+            <ion-icon name="call"></ion-icon>
+            <h4>Phone Number</h4>
+            <a>0769697856</a>
+            </div>
+        <div class="reach">
+                <ion-icon name="mail"></ion-icon>
+                <h4>Email Address</h4>
+                <a>tonykinuthia20@gmail.com</a>
+         </div>
+        </div>
+        <div class="context"></div>
+
+       <div class="social">
+        <a href="https://facebook.com/ule.kinuthia" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="https://twitter.com/Tonioh_ke" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="https://www.linkedin.com/in/antony-njenga-587790243" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://github.com/antonykinuthia" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+       </div>
+    </div>
+ </footer>
+</body>
+<script>
+window.addEventListener('scroll', function(){
+    var header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 0);
+})
+</script>
+
+<script>
+    let context = document.querySelector('.context');
+    for (let i = 1; i <= 5; i++){
+        let dot = document.createElement('div');
+        dot.classList.add('.element')
+        context.appendChild(dot)
+    } 
+</script>
+
+<script>
+   function toggleMenu() {
+    var menuToggle = document.querySelector('.toggle');
+    var list = document.querySelector('.list'); 
+    list.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+   } 
+</script>
+
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</html>

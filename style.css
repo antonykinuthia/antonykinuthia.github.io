@@ -1,0 +1,391 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background: #111;
+}
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    padding: 30px 60px;
+    width: 100%;
+    z-index: 1;
+}
+header.sticky{
+    background: #111;
+    padding: 20px 60px;
+    z-index: 10000;
+}
+header .port{
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .port h1 {
+   text-transform: uppercase;
+}
+header .port h1 a{
+  color: #f0a;
+  text-decoration: none;
+}
+header .list{
+    display: flex;
+}
+header .list ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+header .list ul li{
+    list-style: none;
+    gap: 20px;
+}
+header .list ul li a{
+   text-decoration: none;
+   text-transform: uppercase;
+   color: #989;
+   letter-spacing: 0.2em;
+   transition: 0.5s;
+}
+header .list ul li a:hover,
+header .list ul li a.active
+{
+   color: #0f0;
+}
+.toggle{
+    display: none;
+}
+.home{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    min-height: 100vh;
+}
+.home .more{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.home .more .morebx{
+    max-width: 600px;
+    padding: 20px;
+}
+.home .more .morebx h2{
+   text-transform: uppercase;
+   color: #fff;
+   letter-spacing: 0.2em;
+   font-weight: 400;
+   padding-bottom: 5px;
+}
+.home .more .morebx h2 b:nth-child(1){
+    color: #0f0;
+    font-weight: 600;
+}
+.home .more .morebx h2 b:last-child{
+   color: #f0a;
+   font-weight: 600;
+   font-family: cursive;
+}
+.home .more .morebx p{
+   color: #989;
+   font-size: 1.5em;
+   font-weight: 500;
+   margin-bottom: 10px;
+   transition: 0.5s;
+}
+.home .more .morebx p:hover{
+   color: #1ed;
+}
+.home .more .morebx a{
+  display: inline;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  background: rgb(25, 91, 214);
+  padding: 5px;
+  border-radius: 6px;
+  transition: 0.5s ease-in-out;
+}
+.home .more .morebx a:hover{
+    letter-spacing: 0.2em;
+}
+
+.foo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 30px;
+}
+.foo .About{
+   position: relative;
+   background:  #345;
+   width: 800px;
+   height: fit-content;
+   box-shadow: 0 10px 30px #e91e62;
+   border-radius: 6px;
+   margin: 20px;
+   border: 1px solid #ec9091;
+   text-align: center;
+   animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: translateY(-10px);
+        background: #999;
+        overflow: hidden;
+    }
+    50%{
+        transform: translateY(20px);
+        box-shadow: 10px 20px 45px #ada;
+        color: #0fc;
+    } 
+}
+.About .bx{
+   text-align: center;
+   gap: 50px;
+   justify-content:center;
+}
+.About .bx h1{
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 600;
+    margin: 20px;
+    color: #0f0;
+}
+.About .bx b{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 300;
+    gap: 20px;
+    padding: 20px;
+}
+.About .bx blockquote{
+  display: flex;
+  justify-content: end;
+}
+.About .bx p{
+   color: #1ea;
+   font-style: italic;
+   font-size: 1em;
+   font-weight: 100;
+}
+.About .bx cite{
+    text-align: center;
+    bottom: 150px;
+    margin: 20px;
+}
+.Work{
+    width: 100%;
+    display: grid;
+}
+.Work .fine{
+    text-align: center;
+    padding: 20px;
+}
+
+.Work .fine h2{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.5em;
+    letter-spacing: 0.2em;
+    font-family: monospace;
+    color: #90a;
+    transition: 0.5s;
+}
+.Work .fine h2:hover{
+    color: #0fc;
+}
+.Work .done{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.Work .done .real{
+   padding: 30px 20px;
+   background: linear-gradient(45deg #222, #222 50%, #345 50%, #345);
+   width: 450px;
+   margin: 20px;
+   border: 1px solid rgba(245,245,255,0.5);
+   text-align: center;
+   overflow: hidden;
+   transition: 0.5s;
+}
+.Work .done .real:hover{
+   border-color: var(--clr);
+}
+.Work .done .real img{
+    width: 120px;
+    height: 90px;
+    border: 1px solid var(--clr);
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    background: var(--clr);
+}
+.Work .done .real:hover img{
+  box-shadow: 0 0 0 1px #2e2e2e,
+  0 0 0 300px var(--clr);
+}
+.Work .done .real h3{
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--clr);
+  transition: 0.5s ease-in-out;
+}
+.Work .done:hover .real h3{
+  color: #fff;
+}
+.Work .done .real span{
+   color: #899089;
+   font-weight: 400;
+   transition: 0.5s ease-in-out;
+}
+.Work .done .real:hover span{
+    color: #112;
+}
+.holla{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact{
+    width: 100%;
+    position: relative;
+}
+.holla h3{
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em; 
+}
+.me{
+   max-width: 100%;
+}
+.me .yours{
+    padding: 100px;
+}
+.me .yours .reach{
+    display: ruby-text-container;
+    padding: 20px;
+}  
+.me .yours .reach ion-icon{
+    font-size: 1.5em;
+    position: absolute;
+    left: 60px;
+    margin-left: 20px;
+    color: #fff;
+    align-items: center;
+}
+.me .yours .reach h4{
+    color: #2ad;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+.me .yours .reach a{
+    color: #888;
+    font-weight: 400;
+}
+.social{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.social ion-icon{
+    padding: 40px;
+    font-size: 2.5em;
+    color: #388;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.social ion-icon:hover{
+    transform-style: preserve-3d;
+    transform: translate(25px);
+    font-size: 3em;
+    color: #e9e70d;
+    box-shadow: 0 5px 10px #eff;
+    border-radius: 50%;
+    background: #fff;
+    color: #111;
+
+}
+@media (max-width: 800px)
+{
+    .toggle{
+       display: block;
+       position: relative;
+       width: 30px;
+       height: 30px;
+       cursor: pointer;
+    }
+    .toggle::before{
+       content: '';
+       position: absolute;
+       top: 4px;
+       width: 100%;
+       background: #fff;
+       z-index: 1;
+       box-shadow:  0 10px 0 #fff; 
+    }
+    .btn{
+        font-size: 2em;
+    }
+   header .port{
+    font-size: 0.7em;
+   }
+  .bx{
+    font-size: 0.7em;
+  }
+  .bx p,
+  cite{
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+  .done .real{
+    max-width: 320px;
+  }
+  .done .real span{
+    font-size: 1em;
+    text-overflow: ellipsis;
+  }
+  .social{
+    font-size: 0.7em;
+  }
+}
+@media (max-width: 480px) {
+    header .list{
+        display: none;
+    }
+    .social{
+        transition: 0.5s ease-in-out;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        font-size: 0.5em;
+        border-radius: 50%;
+        /* transform: translateY(-200px); */
+    }
+    
+}
